@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	
+	<script id="alert_detail_action" type="application/xml">
+		<div id="alert_detail_action#{alert_guid}_#{guid}" class="alert_action">
+			<button class="ui11" title="#{hint}">
+				<span class="outer">
+					<span style="white-space: nowrap;" class="inner">
+						<span>#{label}</span>
+					</span>
+				</span>
+			</button>
+		</div>
+	</script>
+</j:jelly>

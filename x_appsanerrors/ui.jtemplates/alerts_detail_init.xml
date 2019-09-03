@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	<script type="text/javascript">
+		addLoadEvent(function () {
+			$('chart_container${jvar_guid}').hide();
+			
+			if (typeof(alertDetailManagerList) == 'undefined')
+				var alertDetailManagerList = {};
+				
+			alertDetailManagerList['${jvar_alert_guid}'] = new AlertDetailManager('${jvar_alert_guid}');
+		});
+	</script>
+</j:jelly>

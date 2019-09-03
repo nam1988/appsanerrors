@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	<script id="alert_row" type="application/xml">
+		<div id="alert#{guid}" class="alert_row" style="cursor:pointer;">
+			<h3 class="alert_row_title">#{title}</h3>
+			<span class="alert_row_subtitle">#{subtitle}</span>
+			<span class="alert_row_subtitle alert_row_subtitle_date">#{startDate}</span>
+			<div id="alert_row_actions#{guid}" class="alert_row_actions">
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</script>
+	
+	<script id="alert_list_action" type="application/xml">
+		<div id="alert_action#{alert_guid}_#{guid}" class="alert_action">
+			<button class="ui11" title="#{hint}">
+				<span class="outer">
+					<span style="white-space: nowrap;" class="inner">
+						<span>#{label}</span>
+					</span>
+				</span>
+			</button>
+		</div>
+	</script>
+</j:jelly>

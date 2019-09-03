@@ -1,0 +1,48 @@
+.alert_detail {
+	min-width: 930px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.alert_detail_stat {
+	color: #666;
+	margin-right: 10px;	
+}
+
+.alert_detail_stat_field {
+	margin-left: 5px;
+}
+
+.alert_detail h1 {
+	margin-bottom: 1px;
+}
+
+.alert_detail_actions {
+	margin-top: 5px;
+}
+
+.alert_action {
+	float: left;
+}
+
+.no_alert_selected {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 950;
+	background-color: #F0F0F0;
+	text-align: center;
+	
+}
+
+.no_alert_selected p {
+	position: relative;
+	top: 30%;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	color: #666;
+	font-weight: bold;
+	vertical-align: middle;
+}

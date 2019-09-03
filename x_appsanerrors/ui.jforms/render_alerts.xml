@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	<table width="100%">
+		<tr>
+			<td width="200px" valign="top">
+				<g:insert template="render_alerts_list.xml"/>
+			</td>
+			<td id="alert_detail_container${jvar_alert_guid}" valign="top">
+				<g:insert template="render_alerts_detail.xml" />
+			</td>
+		</tr>
+	</table>
+</j:jelly>

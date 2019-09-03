@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	
+	<div id="alert_detail${jvar_alert_guid}" class="alert_detail">
+		<j:if test="${!RP.isPreview()}">
+			<div id="no_alert_selected${jvar_alert_guid}" class="no_alert_selected">
+				<p>You have not selected an alert. First, you must have an alert list widget added. Then you must click on an active alert to have it appear here.</p>
+			</div>
+		</j:if>
+		<h1 id="alert_detail_title${jvar_alert_guid}">(Alert Title)</h1>
+		<span class="alert_detail_stat">
+			Priority: <span id="alert_detail_priority${jvar_alert_guid}" class="alert_detail_stat_field">.</span>
+		</span>
+		<span class="alert_detail_stat">
+			Started: <span id="alert_detail_start${jvar_alert_guid}" class="alert_detail_stat_field">.</span>
+		</span>
+		<span class="alert_detail_stat">
+			Last Updated: <span id="alert_detail_last${jvar_alert_guid}" class="alert_detail_stat_field">.</span>
+		</span>
+		<span class="alert_detail_stat">
+			Count: <span id="alert_detail_count${jvar_alert_guid}" class="alert_detail_stat_field">.</span>
+		</span>
+		<div id="alert_detail_actions${jvar_alert_guid}" class="alert_detail_actions">(Alert Action Buttons)</div>
+		<div style="clear:both;"></div>
+		<p id="alert_detail_text${jvar_alert_guid}">(Alert Detail)</p>
+		<div id="alert_detail_graph${jvar_alert_guid}">
+			<g:evaluate>
+				var previousHomePage = RP.isHomePage();
+				RP.setHomePage(false);
+			</g:evaluate>
+			<g:insert template="render_rrdb_highchart.xml" />
+			<g:evaluate>
+				RP.setHomePage(previousHomePage);
+			</g:evaluate>
+		</div>
+	</div>
+</j:jelly>

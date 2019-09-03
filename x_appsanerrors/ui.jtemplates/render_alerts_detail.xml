@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	<g:requires name="alert_detail_styles.css"/>
+	
+	<j:set var="jvar_alert_guid" value="${GlideGuid.generate(null)}"/>
+	<j:set var="jvar_guid" value="${jvar_alert_guid}"/>
+	
+	<table width="100%">
+		<tr>
+			<td id="alert_detail_container${jvar_alert_guid}" valign="top">
+				<g:insert template="alerts_detail.xml" />
+			</td>
+		</tr>
+	</table>
+	<g:requires name="scripts/AlertDetailIncludes.js" includes="true" />
+	<g:insert template="alerts_detail_templates.xml" />
+	<g:insert template="alerts_detail_init.xml"/>
+</j:jelly>

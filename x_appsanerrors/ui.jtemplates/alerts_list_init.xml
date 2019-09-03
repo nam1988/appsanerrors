@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"
+	xmlns:j2="null" xmlns:g2="null">
+	<g:evaluate>
+		var seconds_window = new GlideProperty('com.glide.alerts.alert_inactive_window', 120);
+	</g:evaluate>
+	<script type="text/javascript">
+		if (!g_alert_list_time_window)
+			var g_alert_list_time_window = ${seconds_window};
+		
+		addLoadEvent(function () {
+			if (typeof(alertListManagerList) == 'undefined')
+				var alertListManagerList = {};
+	
+			alertListManagerList['${jvar_alert_guid}'] = new AlertListManager('${jvar_alert_guid}');
+		});
+	</script>
+</j:jelly>

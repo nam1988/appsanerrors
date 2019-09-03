@@ -1,0 +1,32 @@
+.alert_row {
+	margin-bottom: 10px;
+}
+
+.alert_row:hover {
+	background-color: #EEEEEE;
+}
+
+.alert_row_selected {
+	background-color: #E9EEFF;
+}
+
+.alert_row_title {
+	margin: 2px 0;
+}
+
+.alert_row_subtitle {
+	display: block;
+}
+
+.alert_row_subtitle_date {
+	text-align: right;
+	color: #333;
+	font-style: italic;
+}
+
+.alert_list_container {
+	overflow-y: auto;
+	padding: 5px;
+	max-height: 550px;
+	height: expression(this.scrollHeight>549?"550px":"auto");
+}
