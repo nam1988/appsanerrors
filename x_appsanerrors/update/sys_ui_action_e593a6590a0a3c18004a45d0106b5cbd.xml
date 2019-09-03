@@ -1,61 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_action">
-  <sys_ui_action action="INSERT_OR_UPDATE">
-    <action_name>execute_now</action_name>
-    <active>true</active>
-    <client>false</client>
-    <comments>Security Audit</comments>
-    <condition>!current.isNewRecord() &amp;&amp; current.state != 3</condition>
-    <form_action>true</form_action>
-    <form_button>true</form_button>
-    <form_context_menu>false</form_context_menu>
-    <form_link>false</form_link>
-    <hint>Process security audit</hint>
-    <list_action>true</list_action>
-    <list_banner_button>false</list_banner_button>
-    <list_button>false</list_button>
-    <list_choice>false</list_choice>
-    <list_context_menu>true</list_context_menu>
-    <list_link>false</list_link>
-    <list_save_with_form_button>false</list_save_with_form_button>
-    <name>Execute now</name>
-    <onclick/>
-    <order>1000</order>
-    <script>if (!current.users &amp;&amp; !current.roles &amp;&amp; !current.ess)&#13;
-    gs.addInfoMessage(gs.getMessage('You must select at least one User, Role, or Check ESS to generate an Audit set'));&#13;
-else if (!newSet())&#13;
-    gs.addInfoMessage(gs.getMessage('This set has already been executed. Please create a new set to run again.'));&#13;
-else&#13;
-   runSecurityAudit();&#13;
-&#13;
-action.setRedirectURL(current);&#13;
-&#13;
-&#13;
-function runSecurityAudit() {&#13;
-  new SecurityAuditor(current);&#13;
-}&#13;
-&#13;
-function newSet() {&#13;
-  var ran = new GlideRecord('security_audit_line');&#13;
-  ran.addQuery('set', current.sys_id);&#13;
-  ran.query();&#13;
-  if (ran.next())&#13;
-      return false;&#13;
- &#13;
-  return true;&#13;
-}</script>
-    <show_insert>true</show_insert>
-    <show_multiple_update>false</show_multiple_update>
-    <show_query>false</show_query>
-    <show_update>true</show_update>
-    <sys_created_by>christen.mitchell</sys_created_by>
-    <sys_created_on>2011-05-12 19:01:10</sys_created_on>
-    <sys_domain>global</sys_domain>
-    <sys_id>e593a6590a0a3c18004a45d0106b5cbd</sys_id>
-    <sys_mod_count>5</sys_mod_count>
-    <sys_overrides/>
-    <sys_updated_by>admin</sys_updated_by>
-    <sys_updated_on>2011-11-10 21:33:22</sys_updated_on>
-    <table>security_audit_set</table>
-  </sys_ui_action>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>execute_now</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments>Security Audit</comments>
+        <condition>!current.isNewRecord() &amp;&amp; current.state != 3</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Process security audit</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>true</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Execute now</name>
+        <onclick/>
+        <order>1000</order>
+        <script><![CDATA[if (!current.users && !current.roles && !current.ess)
+    gs.addInfoMessage(gs.getMessage('You must select at least one User, Role, or Check ESS to generate an Audit set'));
+else if (!newSet())
+    gs.addInfoMessage(gs.getMessage('This set has already been executed. Please create a new set to run again.'));
+else
+   runSecurityAudit();
+
+action.setRedirectURL(current);
+
+
+function runSecurityAudit() {
+  new SecurityAuditor(current);
+}
+
+function newSet() {
+  var ran = new GlideRecord('security_audit_line');
+  ran.addQuery('set', current.sys_id);
+  ran.query();
+  if (ran.next())
+      return false;
+ 
+  return true;
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>christen.mitchell</sys_created_by>
+        <sys_created_on>2011-05-12 19:01:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e593a6590a0a3c18004a45d0106b5cbd</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Execute now</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AppSanErrors" source="x_appsanerrors">5a44a9272c233300964f09ed930d10c2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AppSanErrors">5a44a9272c233300964f09ed930d10c2</sys_scope>
+        <sys_update_name>sys_ui_action_e593a6590a0a3c18004a45d0106b5cbd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2011-11-10 21:33:22</sys_updated_on>
+        <table>security_audit_set</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
 </record_update>

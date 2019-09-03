@@ -1,19 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_relationship">
-  <sys_relationship action="INSERT_OR_UPDATE">
-    <advanced>false</advanced>
-    <apply_to/>
-    <basic_apply_to>security_audit_set</basic_apply_to>
-    <basic_query_from>security_audit_line</basic_query_from>
-    <insert_callback/>
-    <name>Security Audit Lines (ALL)</name>
-    <query_from/>
-    <query_with>current.addQuery('set=' + parent.sys_id);</query_with>
-    <sys_created_by>christen.mitchell</sys_created_by>
-    <sys_created_on>2011-05-11 16:24:25</sys_created_on>
-    <sys_id>dfdfa2250a0a3c180190a8cd26e8a304</sys_id>
-    <sys_mod_count>3</sys_mod_count>
-    <sys_updated_by>christen.mitchell</sys_updated_by>
-    <sys_updated_on>2011-05-20 19:39:56</sys_updated_on>
-  </sys_relationship>
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>security_audit_set</basic_apply_to>
+        <basic_query_from>security_audit_line</basic_query_from>
+        <insert_callback/>
+        <name>Security Audit Lines (ALL)</name>
+        <query_from/>
+        <query_with><![CDATA[current.addQuery('set=' + parent.sys_id);]]></query_with>
+        <reference_field/>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>christen.mitchell</sys_created_by>
+        <sys_created_on>2011-05-11 16:24:25</sys_created_on>
+        <sys_id>dfdfa2250a0a3c180190a8cd26e8a304</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Security Audit Lines (ALL)</sys_name>
+        <sys_package display_value="AppSanErrors" source="x_appsanerrors">5a44a9272c233300964f09ed930d10c2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AppSanErrors">5a44a9272c233300964f09ed930d10c2</sys_scope>
+        <sys_update_name>sys_relationship_dfdfa2250a0a3c180190a8cd26e8a304</sys_update_name>
+        <sys_updated_by>christen.mitchell</sys_updated_by>
+        <sys_updated_on>2011-05-20 19:39:56</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=dfdfa2250a0a3c180190a8cd26e8a304"/>
 </record_update>

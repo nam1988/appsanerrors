@@ -1,17 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_ui_policy_action">
-  <sys_ui_policy_action action="INSERT_OR_UPDATE">
-    <disabled>ignore</disabled>
-    <field>table</field>
-    <mandatory>true</mandatory>
-    <sys_created_by>christen.mitchell</sys_created_by>
-    <sys_created_on>2011-05-12 04:30:14</sys_created_on>
-    <sys_id>e277df4b0a0a3c18007b9c54855ab2b2</sys_id>
-    <sys_mod_count>2</sys_mod_count>
-    <sys_updated_by>christen.mitchell</sys_updated_by>
-    <sys_updated_on>2011-05-20 19:39:25</sys_updated_on>
-    <table>security_audit_set</table>
-    <ui_policy display_value="security_audit_set">e277c9390a0a3c1800e2a5f6800d8ed4</ui_policy>
-    <visible>true</visible>
-  </sys_ui_policy_action>
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>table</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>christen.mitchell</sys_created_by>
+        <sys_created_on>2011-05-12 04:30:14</sys_created_on>
+        <sys_id>e277df4b0a0a3c18007b9c54855ab2b2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>table</sys_name>
+        <sys_package display_value="AppSanErrors" source="x_appsanerrors">5a44a9272c233300964f09ed930d10c2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AppSanErrors">5a44a9272c233300964f09ed930d10c2</sys_scope>
+        <sys_update_name>sys_ui_policy_action_e277df4b0a0a3c18007b9c54855ab2b2</sys_update_name>
+        <sys_updated_by>christen.mitchell</sys_updated_by>
+        <sys_updated_on>2011-05-20 19:39:25</sys_updated_on>
+        <table>security_audit_set</table>
+        <ui_policy display_value="Security inspector - Hide Table if not field level">e277c9390a0a3c1800e2a5f6800d8ed4</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
 </record_update>

@@ -1,36 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_policy">
-  <sys_ui_policy action="INSERT_OR_UPDATE">
-    <active>true</active>
-    <conditions table="security_audit_set">field_level=true^EQ<item endquery="false" field="field_level" goto="false" newquery="false" operator="=" or="false" value="true"/>
-      <item endquery="true" field="" goto="false" newquery="false" operator="" or="false" value=""/>
-    </conditions>
-    <description/>
-    <global>true</global>
-    <inherit>false</inherit>
-    <model_id/>
-    <model_table/>
-    <on_load>true</on_load>
-    <order>100</order>
-    <reverse_if_false>true</reverse_if_false>
-    <run_scripts>true</run_scripts>
-    <script_false>function onCondition() {&#13;
-&#13;
-}</script_false>
-    <script_true>function onCondition() {&#13;
-&#13;
-}</script_true>
-    <set_values/>
-    <short_description>Security inspector - Hide Table if not field level</short_description>
-    <sys_created_by>christen.mitchell</sys_created_by>
-    <sys_created_on>2011-05-12 04:29:51</sys_created_on>
-    <sys_domain>global</sys_domain>
-    <sys_id>e277c9390a0a3c1800e2a5f6800d8ed4</sys_id>
-    <sys_mod_count>6</sys_mod_count>
-    <sys_overrides/>
-    <sys_updated_by>christen.mitchell</sys_updated_by>
-    <sys_updated_on>2011-05-20 19:39:06</sys_updated_on>
-    <table>security_audit_set</table>
-    <view/>
-  </sys_ui_policy>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="security_audit_set">field_level=true^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Security inspector - Hide Table if not field level</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>christen.mitchell</sys_created_by>
+        <sys_created_on>2011-05-12 04:29:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e277c9390a0a3c1800e2a5f6800d8ed4</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Security inspector - Hide Table if not field level</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AppSanErrors" source="x_appsanerrors">5a44a9272c233300964f09ed930d10c2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AppSanErrors">5a44a9272c233300964f09ed930d10c2</sys_scope>
+        <sys_update_name>sys_ui_policy_e277c9390a0a3c1800e2a5f6800d8ed4</sys_update_name>
+        <sys_updated_by>christen.mitchell</sys_updated_by>
+        <sys_updated_on>2011-05-20 19:39:06</sys_updated_on>
+        <table>security_audit_set</table>
+        <ui_type/>
+        <view/>
+    </sys_ui_policy>
 </record_update>

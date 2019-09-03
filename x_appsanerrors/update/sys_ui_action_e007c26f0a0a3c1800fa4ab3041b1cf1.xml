@@ -1,45 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_action">
-  <sys_ui_action action="INSERT_OR_UPDATE">
-    <action_name/>
-    <active>true</active>
-    <client>false</client>
-    <comments>Security Audit</comments>
-    <condition>gs.hasRole('admin')</condition>
-    <form_action>false</form_action>
-    <form_button>false</form_button>
-    <form_context_menu>false</form_context_menu>
-    <form_link>false</form_link>
-    <hint/>
-    <list_action>true</list_action>
-    <list_banner_button>false</list_banner_button>
-    <list_button>false</list_button>
-    <list_choice>false</list_choice>
-    <list_context_menu>true</list_context_menu>
-    <list_link>false</list_link>
-    <list_save_with_form_button>false</list_save_with_form_button>
-    <name>Access Controls</name>
-    <onclick/>
-    <order>100</order>
-    <script>var query = 'name=*^ORnameSTARTSWITH*.';&#13;
-var cis = GlideDBObjectManager.getTables(current.table);;&#13;
-&#13;
-for (var i = 0; i &lt; cis.size(); i++)&#13;
-  query += '^ORname=' + cis.get(i) + '^ORnameSTARTSWITH' + cis.get(i) + '.';&#13;
-&#13;
-gs.setRedirect("sys_security_acl_list.do?sysparm_query=" + query);</script>
-    <show_insert>true</show_insert>
-    <show_multiple_update>false</show_multiple_update>
-    <show_query>false</show_query>
-    <show_update>true</show_update>
-    <sys_created_by>christen.mitchell</sys_created_by>
-    <sys_created_on>2011-05-11 17:13:52</sys_created_on>
-    <sys_domain>global</sys_domain>
-    <sys_id>e007c26f0a0a3c1800fa4ab3041b1cf1</sys_id>
-    <sys_mod_count>7</sys_mod_count>
-    <sys_overrides/>
-    <sys_updated_by>christen.mitchell</sys_updated_by>
-    <sys_updated_on>2011-05-20 19:48:29</sys_updated_on>
-    <table>security_audit_line</table>
-  </sys_ui_action>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments>Security Audit</comments>
+        <condition>gs.hasRole('admin')</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>true</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Access Controls</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var query = 'name=*^ORnameSTARTSWITH*.';
+var cis = GlideDBObjectManager.getTables(current.table);;
+
+for (var i = 0; i < cis.size(); i++)
+  query += '^ORname=' + cis.get(i) + '^ORnameSTARTSWITH' + cis.get(i) + '.';
+
+gs.setRedirect("sys_security_acl_list.do?sysparm_query=" + query);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>christen.mitchell</sys_created_by>
+        <sys_created_on>2011-05-11 17:13:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e007c26f0a0a3c1800fa4ab3041b1cf1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Access Controls</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AppSanErrors" source="x_appsanerrors">5a44a9272c233300964f09ed930d10c2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AppSanErrors">5a44a9272c233300964f09ed930d10c2</sys_scope>
+        <sys_update_name>sys_ui_action_e007c26f0a0a3c1800fa4ab3041b1cf1</sys_update_name>
+        <sys_updated_by>christen.mitchell</sys_updated_by>
+        <sys_updated_on>2011-05-20 19:48:29</sys_updated_on>
+        <table>security_audit_line</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
 </record_update>
