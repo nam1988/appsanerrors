@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+  <sys_script_client action="INSERT_OR_UPDATE">
+    <active>true</active>
+    <applies_extended>false</applies_extended>
+    <condition/>
+    <description/>
+    <field>active</field>
+    <global>true</global>
+    <name>Ensure User, Role, or Check ESS</name>
+    <script>function onSubmit() {&#13;
+   if (g_form.getActionName() != 'execute_now')&#13;
+       return; &#13;
+&#13;
+   if (g_form.getValue('users') != '' || g_form.getValue('roles') != '' || g_form.getValue('ess') == 'true')&#13;
+       return;&#13;
+&#13;
+   gsftWarn('Missing required fields', 'You must select at least one User, Role, or Check ESS to generate an Audit set');&#13;
+   return false;&#13;
+}&#13;
+&#13;
+/**&#13;
+ * A GlideDialogWindow with an OK button&#13;
+ * @param title&#13;
+ * @param question&#13;
+ * @param onPromptComplete (Optional callback function pointer)&#13;
+ * @return&#13;
+ */&#13;
+function gsftWarn(title, question, onPromptComplete) {&#13;
+  var dialog = new GlideDialogWindow('glide_warn', false);&#13;
+  dialog.setTitle(title);&#13;
+  dialog.setPreference('title', question);  &#13;
+  dialog.setPreference('onPromptComplete', onPromptComplete);&#13;
+  dialog.render();&#13;
+}</script>
+    <sys_class_name>sys_script_client</sys_class_name>
+    <sys_created_by>christen.mitchell</sys_created_by>
+    <sys_created_on>2011-05-21 23:32:38</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_id>ab00069dff320000dadad1cb127f9d4d</sys_id>
+    <sys_mod_count>2</sys_mod_count>
+    <sys_overrides/>
+    <sys_updated_by>christen.mitchell</sys_updated_by>
+    <sys_updated_on>2011-05-21 23:53:06</sys_updated_on>
+    <table>security_audit_set</table>
+    <type>onSubmit</type>
+    <view/>
+  </sys_script_client>
+</record_update>

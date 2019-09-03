@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sys_ui_related sys_domain="global" table="security_audit_set" version="2" view="">
+  <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+    <filter/>
+    <list_id display_value="security_audit_set">0342d845ff320000dadad1cb127f9d30</list_id>
+    <order_by/>
+    <position>0</position>
+    <related_list>REL:dfdfa2250a0a3c180190a8cd26e8a304</related_list>
+    <sys_created_by>christen.mitchell</sys_created_by>
+    <sys_created_on>2011-05-20 20:48:44</sys_created_on>
+    <sys_id>8742d845ff320000dadad1cb127f9d30</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>christen.mitchell</sys_updated_by>
+    <sys_updated_on>2011-05-20 20:48:44</sys_updated_on>
+  </sys_ui_related_list_entry>
+  <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+    <filter/>
+    <list_id display_value="security_audit_set">0342d845ff320000dadad1cb127f9d30</list_id>
+    <order_by/>
+    <position>1</position>
+    <related_list>REL:dfd310f40a0a3c1801945e227c0f97f1</related_list>
+    <sys_created_by>christen.mitchell</sys_created_by>
+    <sys_created_on>2011-05-20 20:48:44</sys_created_on>
+    <sys_id>8f42d845ff320000dadad1cb127f9d30</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>christen.mitchell</sys_updated_by>
+    <sys_updated_on>2011-05-20 20:48:44</sys_updated_on>
+  </sys_ui_related_list_entry>
+  <sys_ui_related_list action="INSERT_OR_UPDATE">
+    <filter/>
+    <name>security_audit_set</name>
+    <order_by/>
+    <position/>
+    <related_list/>
+    <sys_created_by>christen.mitchell</sys_created_by>
+    <sys_created_on>2011-05-20 20:48:44</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_id>0342d845ff320000dadad1cb127f9d30</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>christen.mitchell</sys_updated_by>
+    <sys_updated_on>2011-05-20 20:48:44</sys_updated_on>
+    <sys_user/>
+    <view display_value="Default view">Default view</view>
+    <view_name/>
+  </sys_ui_related_list>
+</sys_ui_related>

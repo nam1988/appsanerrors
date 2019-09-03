@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE">
+    <action_name>rerun_audit</action_name>
+    <active>true</active>
+    <client>false</client>
+    <comments>Rerun security audit, deletes all existing audit lines for this set</comments>
+    <condition>!current.isNewRecord() &amp;&amp; current.state == 3</condition>
+    <form_action>true</form_action>
+    <form_button>true</form_button>
+    <form_context_menu>false</form_context_menu>
+    <form_link>false</form_link>
+    <hint>Rerun security audit, deletes all existing audit lines for this set</hint>
+    <list_action>true</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>true</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <name>Rerun Audit</name>
+    <onclick/>
+    <order>1000</order>
+    <script>if (!current.users &amp;&amp; !current.roles &amp;&amp; !current.ess)&#13;
+    gs.addInfoMessage(gs.getMessage('You must select at least one User, Role, or Check ESS to generate an Audit set'));&#13;
+else&#13;
+   runSecurityAudit();&#13;
+&#13;
+action.setRedirectURL(current);&#13;
+&#13;
+&#13;
+function runSecurityAudit() {&#13;
+   deleteLines(current);&#13;
+   new SecurityAuditor(current);&#13;
+}&#13;
+&#13;
+function deleteLines(set) {&#13;
+   var lines = new GlideRecord("security_audit_line");&#13;
+   lines.addQuery("set", set.getUniqueValue());&#13;
+   lines.query();&#13;
+   lines.deleteMultiple();&#13;
+}</script>
+    <show_insert>false</show_insert>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2011-11-10 21:12:47</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_id>7b7c1049ff921000dadaebcfebffadf4</sys_id>
+    <sys_mod_count>4</sys_mod_count>
+    <sys_overrides/>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2011-11-10 21:31:39</sys_updated_on>
+    <table>security_audit_set</table>
+  </sys_ui_action>
+</record_update>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_style">
+  <sys_ui_style action="INSERT_OR_UPDATE">
+    <element>can_create</element>
+    <name>security_audit_line</name>
+    <style>background-color:lightgreen</style>
+    <sys_created_by>admin</sys_created_by>
+    <sys_created_on>2011-11-10 18:58:05</sys_created_on>
+    <sys_id>a2fe3b74ff921000dadaebcfebffad38</sys_id>
+    <sys_mod_count>0</sys_mod_count>
+    <sys_updated_by>admin</sys_updated_by>
+    <sys_updated_on>2011-11-10 18:58:05</sys_updated_on>
+    <value>Yes</value>
+  </sys_ui_style>
+</record_update>

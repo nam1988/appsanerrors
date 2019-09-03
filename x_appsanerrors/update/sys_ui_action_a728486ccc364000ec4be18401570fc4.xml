@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+  <sys_ui_action action="INSERT_OR_UPDATE">
+    <action_name>copy_security_set</action_name>
+    <active>true</active>
+    <client>false</client>
+    <comments>Security Audit</comments>
+    <condition>!current.isNewRecord()</condition>
+    <form_action>true</form_action>
+    <form_button>false</form_button>
+    <form_context_menu>true</form_context_menu>
+    <form_link>false</form_link>
+    <hint/>
+    <list_action>true</list_action>
+    <list_banner_button>false</list_banner_button>
+    <list_button>false</list_button>
+    <list_choice>false</list_choice>
+    <list_context_menu>true</list_context_menu>
+    <list_link>false</list_link>
+    <list_save_with_form_button>false</list_save_with_form_button>
+    <name>Copy security set</name>
+    <onclick/>
+    <order>1000</order>
+    <script>var saveMe = current;&#13;
+current.number = '';&#13;
+current.state = '';&#13;
+current.insert();&#13;
+action.setRedirectURL(saveMe);</script>
+    <show_insert>true</show_insert>
+    <show_multiple_update>false</show_multiple_update>
+    <show_query>false</show_query>
+    <show_update>true</show_update>
+    <sys_created_by>christen.mitchell</sys_created_by>
+    <sys_created_on>2011-05-19 06:47:18</sys_created_on>
+    <sys_domain>global</sys_domain>
+    <sys_id>a728486ccc364000ec4be18401570fc4</sys_id>
+    <sys_mod_count>6</sys_mod_count>
+    <sys_overrides/>
+    <sys_updated_by>mitchell.maint</sys_updated_by>
+    <sys_updated_on>2011-05-21 23:50:34</sys_updated_on>
+    <table>security_audit_set</table>
+  </sys_ui_action>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_relationship">
+  <sys_relationship action="INSERT_OR_UPDATE">
+    <advanced>false</advanced>
+    <apply_to/>
+    <basic_apply_to>security_audit_set</basic_apply_to>
+    <basic_query_from>security_audit_line</basic_query_from>
+    <insert_callback/>
+    <name>Security Audit Lines (Accessible)</name>
+    <query_from/>
+    <query_with>current.addQuery('set=' + parent.sys_id + '^accessible=true');</query_with>
+    <sys_created_by>christen.mitchell</sys_created_by>
+    <sys_created_on>2011-05-11 16:12:39</sys_created_on>
+    <sys_id>dfd310f40a0a3c1801945e227c0f97f1</sys_id>
+    <sys_mod_count>7</sys_mod_count>
+    <sys_updated_by>christen.mitchell</sys_updated_by>
+    <sys_updated_on>2011-05-20 19:39:42</sys_updated_on>
+  </sys_relationship>
+</record_update>
