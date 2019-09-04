@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="table1" max_length="40" name="x_appsanerrors_table1" type="collection">
-        <element choice="1" choice_field="severity" choice_table="incident" label="Choice1" max_length="40" name="choice1" type="choice">
+        <element choice="1" choice_field="severity" choice_table="incident" label="Choice1" max_length="40" name="choice1" type="choice" active="false" write_roles="itil">
             <choice/>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Col1" max_length="40" name="col1" type="string"/>
